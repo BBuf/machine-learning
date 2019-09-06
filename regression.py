@@ -1,4 +1,5 @@
 #coding=utf-8
+from copy import copy
 
 # 创建Node类
 class Node(object):
@@ -86,6 +87,16 @@ class RegressionTree(object):
             nd, exprs = que.pop(0)
             if not(nd.left or nd.right):
                 literals = list(map(self.expr2literal, exprs))
+                self.rules.append([literals, nd.score])
+            if nd.left:
+                rule_left = copy(exprs)
+                rule_left.append([nd.feature, -1, nd.split])
+                que.append([nd.left, rule_left])
+
+            if nd.right:
+                rule_right = copy(exprs)
+                rule_right.append([nd.feature, 1, nd.split])
+                que.append([nd.right, rule_right])
 
     # 训练模型，仍然使用队列+广度优先搜索，训练模型的过程中需要注意:
     # 1.控制树的最大深度max_depth;
@@ -113,4 +124,6 @@ class RegressionTree(object):
 
         self.depth = depth
         self.get_rules()
+
+
 
