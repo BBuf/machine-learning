@@ -29,7 +29,7 @@ def load_data():
     X = []
     y = []
     for line in f:
-        line = line[:-1].split()
+        line = line[:-1].split(',')
         xi = [float(s) for s in line[:-1]]
         yi = line[-1]
         if '.' in yi:
