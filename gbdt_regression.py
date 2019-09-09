@@ -31,7 +31,7 @@ def load_data():
     X = []
     y = []
     for line in f:
-        line = line[:-1].split()
+        line = line[:-1].split(',')
         xi = [float(s) for s in line[:-1]]
         yi = line[-1]
         if '.' in yi:
@@ -117,24 +117,24 @@ class GradientBoostingBase(object):
 
     # 将样本的索引划分为回归树的相应叶节点。
     # 返回一个字典，类似于:{node1: [1, 3, 5], node2: [2, 4, 6]...}，代表哪个节点对哪些样本进行了决策(分类)
-    def divide_regions(self, tree, nodes, x):
+    def divide_regions(self, tree, nodes, X):
         regions = {node: [] for node in nodes}
         for i, row in enumerate(X):
-            node = self._match_node(row, tree)
+            node = self.match_node(row, tree)
             regions[node].append(i)
         return regions
 
-    # # 计算回归树的叶子节点值
-    # def get_score(self, idxs, y_hat, residuals):
-    #     return None
-    #
-    # # 更新回归树的叶子节点值
-    # def update_score(self, tree, X, y_hat, residuals):
-    #     nodes = self.get_leaves(tree)
-    #     regions = self.divide_regions(tree, nodes, X)
-    #     for node, idxs in regions.items():
-    #         node.score = self.get_score(idxs, y_hat, residuals)
-    #     tree.get_rules()
+    # 计算回归树的叶子节点值
+    def get_score(self, idxs, y_hat, residuals):
+        return None
+
+    # 更新回归树的叶子节点值
+    def update_score(self, tree, X, y_hat, residuals):
+        nodes = self.get_leaves(tree)
+        regions = self.divide_regions(tree, nodes, X)
+        for node, idxs in regions.items():
+            node.score = self.get_score(idxs, y_hat, residuals)
+        tree.get_rules()
 
     # 训练模型的时候需要注意以下几点：
     # 1.控制树的最大深度max_depth；
