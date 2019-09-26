@@ -6,4 +6,5 @@
 - max_heap.py 机器学习算法之最大堆，原理请看：https://blog.csdn.net/just_sort/article/details/100740794
 - linear_regression.py 机器学习算法之线性回归。算法原理请看：https://blog.csdn.net/just_sort/article/details/101216607
 - logistic_regression.py 机器学习算法之逻辑斯蒂回归。算法原理请看：https://blog.csdn.net/just_sort/article/details/101272026
+- kd_tree.py 机器学习算法之KD树，是KNN的基础。算法原理请看：https://blog.csdn.net/just_sort/article/details/101296358
 
