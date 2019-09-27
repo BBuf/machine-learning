@@ -7,4 +7,5 @@
 - linear_regression.py 机器学习算法之线性回归。算法原理请看：https://blog.csdn.net/just_sort/article/details/101216607
 - logistic_regression.py 机器学习算法之逻辑斯蒂回归。算法原理请看：https://blog.csdn.net/just_sort/article/details/101272026
 - kd_tree.py 机器学习算法之KD树，是KNN的基础。算法原理请看：https://blog.csdn.net/just_sort/article/details/101296358
+- knn.py 机器学习算法之k邻近算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/101530830
 
