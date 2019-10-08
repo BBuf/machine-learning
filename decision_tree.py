@@ -211,7 +211,7 @@ class DecisionTree(object):
             nd, exprs = que.pop(0)
             if not(nd.left or nd.right):
                 literals = list(map(self.expr2literal, exprs))
-                self._rules.append([nd.feature, -1, nd.prob])
+                self._rules.append([literals, nd.prob])
             if nd.left:
                 rule_left = copy(exprs)
                 rule_left.append([nd.feature, -1, nd.split])
@@ -246,8 +246,7 @@ class DecisionTree(object):
         self.depth = depth
         self.get_rules()
 
-    @property
-    def rules(self):
+    def print_rules(self):
         for i, rule in enumerate(self._rules):
             literals, prob = rule
             print("Rule %d: " % i, ' | '.join(literals) + ' => y_hat %.4f' % prob)
@@ -273,6 +272,7 @@ def main():
     data_train, data_test, label_train, label_test = train_test_split(data, label, random_state=100)
     clf = DecisionTree()
     clf.fit(data_train, label_train)
+    clf.print_rules()
     y_hat = clf.predict(data_test)
     acc = get_acc(label_test, y_hat)
     print("Accuracy is %.3f" % acc)
