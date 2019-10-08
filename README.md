@@ -11,4 +11,5 @@
 - gauss_nb.py 机器学习算法之高斯朴素贝叶斯算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/101704567
 - als.py 机器学习算法之交替最小二乘法(ALS)算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/101762055
 - decision_tree.py 机器学习算法之决策树算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102400047
+- random_forest.py 机器学习算法之随机深林算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102415869
 
