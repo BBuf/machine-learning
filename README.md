@@ -13,4 +13,4 @@
 - decision_tree.py 机器学习算法之决策树算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102400047
 - random_forest.py 机器学习算法之随机深林算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102415869
 - kmeans.py 机器学习算法之Kmeans聚类算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102499619
-
+- ridge.py 机器学习算法之脊回归算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102511645
