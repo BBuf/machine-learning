@@ -15,3 +15,5 @@
 - kmeans.py 机器学习算法之Kmeans聚类算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102499619
 - ridge.py 机器学习算法之脊回归算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102511645
 - lda-two-classify.py 机器学习算法之LDA二分类算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102690086
+- lda-multi-classify.py 机器学习算法之LDA多分类。算法原理请看：https://blog.csdn.net/just_sort/article/details/102701240
+
