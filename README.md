@@ -18,3 +18,10 @@
 - lda-multi-classify.py 机器学习算法之LDA多分类。算法原理请看：https://blog.csdn.net/just_sort/article/details/102701240
 - perceptron.py 机器学习算法之感知机算法。算法原理请看：https://blog.csdn.net/just_sort/article/details/102792788
 
+
+
+
+
+# 维护了一个微信公众号，分享论文，算法，比赛，生活，欢迎加入。
+
+![](image/weixin.jpg)
